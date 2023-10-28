@@ -1,0 +1,58 @@
+{
+    "version": 2,
+    "name": "OctoPussy",
+    "inherits": "fdmprinter",
+    "metadata": {
+        "visible": true,
+        "author": "Globel",
+        "manufacturer": "Globel",
+        "file_formats": "text/x-gcode",
+		"platform": "OctoPussy_platform.stl",
+        "has_materials": true,
+        "has_machine_quality": true,
+        "machine_extruder_trains":
+        {
+            "0": "OctoPussy_extruder_0"
+        }
+    },
+
+    "overrides": {
+        "machine_name": { "default_value": "OctoPussy" },
+        "machine_width": {
+            "default_value": 400
+        },
+        "machine_height": {
+            "default_value": 400
+        },
+        "machine_depth": {
+            "default_value": 400
+        },
+        "machine_center_is_zero": {
+            "default_value": false
+        },
+		"machine_heated_bed": {
+			"default_value": true
+		},
+        "machine_head_with_fans_polygon":
+        {
+            "default_value": [
+                [ -75, 35 ],
+                [ -75, -18 ],
+                [ 18, 35 ],
+                [ 18, -18 ]
+            ]
+        },
+        "gantry_height": {
+            "value": "200"
+        },
+        "machine_gcode_flavor": {
+            "default_value": "RepRap (Marlin/Sprinter)"
+        },
+        "machine_start_gcode": {
+            "default_value": "START_PRINT BED_TEMP={material_bed_temperature_layer_0} EXTRUDER_TEMP={material_print_temperature_layer_0}"
+        },
+        "machine_end_gcode": {
+            "value": "END_PRINT"
+        }
+    }
+}
